@@ -2,6 +2,7 @@
   "name": "react-concert-seat-picker",
   "version": "1.1.2",
   "private": false,
+  "repository": "git://github.com/xnimax/react-concert-seat-picker.git",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
