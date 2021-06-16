@@ -1,5 +1,5 @@
 export const samp_data = [
-  { id: 1, row: 1, col: 1, isTaken: false, vip: true },
+  { id: 1, row: 1, col: 1, isTaken: true, vip: true },
   { id: 2, row: 1, col: 2, isTaken: false, vip: true },
   { id: 13, row: 3, col: 3, isTaken: false },
   { id: 3, row: 1, col: 3, isTaken: false, vip: true },

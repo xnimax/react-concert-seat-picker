@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import styled from "styled-components";
 import { colors } from "../../config/colors";
 import { samp_data } from "./../../data/sample_data";
@@ -39,7 +39,7 @@ const Hall: FC<HallProps> = () => {
     return unique;
   }
 
-  function reserveChair(item: ChairData): void {
+  const reserveChair = (item: ChairData): void => {
     let dt = [...datas];
     dt.map((grp) => {
       const chair = grp.find((it) => it.id === item.id);
@@ -59,7 +59,8 @@ const Hall: FC<HallProps> = () => {
 
   return (
     <Cnt>
-      <Head> STAGE IS HERE</Head>
+      <ToastContainer />
+      <Head aria-label="title">STAGE IS HERE</Head>
       <Rows>
         {datas.map((item, key) => (
           <RowContainer key={key}>
@@ -76,9 +77,9 @@ const Hall: FC<HallProps> = () => {
 export default Hall;
 const Cnt = styled.div`
   background: ${colors.dark};
-  padding:20px;
-  color:${colors.white};
-  border-radius:10px;
+  padding: 20px;
+  color: ${colors.white};
+  border-radius: 10px;
 `;
 const Rows = styled.div``;
 const RowContainer = styled.div`
@@ -91,4 +92,5 @@ const RowContainer = styled.div`
 
 const Head = styled.h2`
   text-align: center;
+  color: #ffffff;
 `;

@@ -15,11 +15,11 @@ const Chair: React.FC<ChairProps> = ({ data, onClick }) => {
     const swIcon = (dt: ChairData) => {
       switch (dt.isTaken) {
         case true:
-          return available;
+          return unavailable;
         case "reserve":
           return reserve;
         case false:
-          return unavailable;
+          return available;
         default:
           return available;
       }
